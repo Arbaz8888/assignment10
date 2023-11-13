@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Vecta Corp.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> <!-- Add jQuery UI CSS -->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize the mobile menu plugin
+            $('#responsive-menu').mobileMenu();
+
+            // Initialize the Tooltip for each menu item
+            $('#responsive-menu a').tooltip({
+                position: {
+                    my: "center bottom-20",
+                    at: "center top",
+                    using: function (position, feedback) {
+                        $(this).css(position);
+                        $("<div>")
+                            .addClass("arrow")
+                            .addClass(feedback.vertical)
+                            .addClass(feedback.horizontal)
+                            .appendTo(this);
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <main class="container">
+        <figure class="three columns">
+            <img src="images/logo.gif" class="scale-with-grid" alt="">
+        </figure>
+
+        <nav class="thirteen columns">
+            <ul id="responsive-menu">
+                <li><a href="index.html" title="Welcome to Vecta Corp. - Innovative business solutions for success.">Home</a></li>
+                <li><a href="aboutus.html" title="Learn more about Vecta Corp. - Our approach, expertise, and success stories.">About Us</a></li>
+                <li><a href="solutions.html" title="Explore Vecta Corp.'s Solutions - Prospecting, converting, and retaining customers.">Solutions</a></li>
+                <li><a href="support.html" title="Get technical resources and support from Vecta Corp.">Support</a></li>
+                <li><a href="contactus.html" title="Contact Vecta Corp. for inquiries and assistance.">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <header class="sixteen columns">
+            <img src="images/header.gif" class="scale-with-grid" alt="">
+        </header>
+		
+		<section id="welcome" class="sixteen columns">
+			<h4>Support</h4>
+			<p>Find the latest technical resources including articles, tips, patches, documentation and more and discuss ideas with your peers. These communities are your convenient one-stop shop for vSupport. Still have a question? <a href="mailto:support@vectacorp.com?Subject=I%20need%20help...">Send us an email</a>.</p>
+		</section>
+	</main>
+</body>
+</html>
